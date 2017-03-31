@@ -9,9 +9,8 @@ import org.junit.Test;
 public class AppTest extends TestCase {
     @Test
     public void testMain() throws Exception {
-        Animal dog = new DogAdapter(new Dog());
-
-        assertNotNull("This shouldn't be a problem" ,dog);
+        Proxy p = new Proxy("Grey", "Medium", true);
+        assertNotNull("This shouldn't fail", p);
     }
 
 }
