@@ -9,10 +9,9 @@ import org.junit.Test;
 public class AppTest extends TestCase {
     @Test
     public void testMain() throws Exception {
-        AnimalCache.fillCache();
+        Animal dog = new DogAdapter(new Dog());
 
-        Animal animalClone1 = (Animal) AnimalCache.getAnimal("1");
-        assertEquals("This should fail", "Something", animalClone1.getName());
+        assertNotNull("This shouldn't be a problem" ,dog);
     }
 
 }

@@ -1,19 +1,20 @@
 package com.MoorcroftG.Prac5;
 
 /**
- *
+ * Adapter
  *
  */
 public class App 
 {
     public static void main( String[] args )
     {
-        AnimalCache.fillCache();
+        Animal lion = new Lion();
+        Animal tiger = new Tiger();
+        Animal dog = new DogAdapter(new Dog());
 
-        Animal animalClone1 = (Animal) AnimalCache.getAnimal("1");
-        System.out.println(animalClone1.getName());
+        lion.roar();
+        tiger.roar();
+        dog.roar();
 
-        Animal animalClone2 = (Animal) AnimalCache.getAnimal("2");
-        System.out.println(animalClone2.getName());
     }
 }
