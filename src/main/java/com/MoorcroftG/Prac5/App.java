@@ -1,7 +1,7 @@
 package com.MoorcroftG.Prac5;
 
 /**
- *
+ * Prototype
  *
  */
 public class App 
