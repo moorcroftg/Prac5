@@ -1,7 +1,7 @@
 package com.MoorcroftG.Prac5;
 
 /**
- *
+ *  Singleton
  *
  */
 public class App 
