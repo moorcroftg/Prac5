@@ -1,25 +1,19 @@
 package com.MoorcroftG.Prac5;
 
 /**
- * Abstract Factory
+ *
  *
  */
 public class App 
 {
     public static void main( String[] args )
     {
-        AbstractFactory animalFactory = FactoryProducer.getFactory("Animal");
-        Animal cat = animalFactory.getAnimal("Cat");
-        cat.run();
+        AnimalCache.fillCache();
 
-        Animal dog = animalFactory.getAnimal("Dog");
-        dog.run();
+        Animal animalClone1 = (Animal) AnimalCache.getAnimal("1");
+        System.out.println(animalClone1.getName());
 
-        AbstractFactory foodFactory = FactoryProducer.getFactory("Food");
-        Food fish = foodFactory.getFood("Fish");
-        fish.eat();
-
-        Food rabbit = foodFactory.getFood("Rabbit");
-        rabbit.eat();
+        Animal animalClone2 = (Animal) AnimalCache.getAnimal("2");
+        System.out.println(animalClone2.getName());
     }
 }

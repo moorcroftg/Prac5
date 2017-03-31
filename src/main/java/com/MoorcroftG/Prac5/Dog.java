@@ -1,12 +1,17 @@
 package com.MoorcroftG.Prac5;
 
 /**
- *
+ * Created by enusa on 2017/03/31.
  */
-public class Dog implements Animal {
-
-    public void run()
+public class Dog extends Animal {
+    public Dog ()
     {
-        System.out.println("The dog is now running");
+        name = "Tyson";
+    }
+
+    @Override
+    public void sleep()
+    {
+        System.out.println("Tyson is sleeping");
     }
 }

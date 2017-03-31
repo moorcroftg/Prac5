@@ -1,22 +1,18 @@
 package com.MoorcroftG.Prac5;
 
-import org.junit.Test;
 import junit.framework.TestCase;
-import junit.framework.TestSuite;
-
+import org.junit.Test;
 
 /**
- * Unit test for simple App.
+ * Created by enusa on 2017/03/31.
  */
-public class AppTest 
-    extends TestCase
-{
+public class AppTest extends TestCase {
     @Test
     public void testMain() throws Exception {
-        AbstractFactory animalFactory = FactoryProducer.getFactory("Animal");
-        Animal cat = animalFactory.getAnimal("Cat");
+        AnimalCache.fillCache();
 
-        assertNotNull("This object shouldn't be null", cat);
+        Animal animalClone1 = (Animal) AnimalCache.getAnimal("1");
+        assertEquals("This should fail", "Something", animalClone1.getName());
     }
 
 }
