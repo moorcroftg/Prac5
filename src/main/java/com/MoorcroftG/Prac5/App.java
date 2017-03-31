@@ -1,13 +1,15 @@
 package com.MoorcroftG.Prac5;
 
 /**
- * Hello world!
+ *
  *
  */
 public class App 
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        Concat c = new Concat ("One", "word!");
+        System.out.println(c.concatMethod());
+
     }
 }
