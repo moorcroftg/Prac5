@@ -1,12 +1,14 @@
 package com.MoorcroftG.Prac5;
 
 /**
- *
+ * Created by enusa on 2017/04/02.
  */
-public class Cat implements Animals {
+public class Cat implements Animals{
 
-    public void accept(AnimalVisitor animalVisitor)
-    {
-        animalVisitor.visit(this);
+    public String makeNoise() {
+        String sound;
+        sound = "Meow. I'm hungry";
+        sound += "\nPlease feed me";
+        return sound;
     }
 }
